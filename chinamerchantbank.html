@@ -51,11 +51,11 @@
     </style>
 </head>
 <body class="font-display text-black antialiased">
-<div class="flex flex-col lg:flex-row h-screen w-full">
+<div class="flex flex-col lg:flex-row w-full">
 <button id="menu-toggle" class="lg:hidden fixed top-4 left-4 z-50 p-2 bg-white border border-black/10">
     <span class="material-symbols-outlined">menu</span>
 </button>
-<aside class="w-full lg:w-[400px] border-r border-black/5 flex flex-col h-full bg-[#F9F9F7] z-10 fixed lg:relative inset-0 transform -translate-x-full lg:translate-x-0 transition-transform duration-300" id="sidebar">
+<aside class="w-full lg:w-[400px] border-r border-black/5 flex flex-col min-h-screen lg:min-h-0 lg:h-screen bg-[#F9F9F7] z-10 fixed lg:relative inset-0 transform -translate-x-full lg:translate-x-0 transition-transform duration-300" id="sidebar">
 <button id="close-menu" class="lg:hidden absolute top-4 right-4 p-2"><span class="material-symbols-outlined">close</span></button>
 <header class="p-6 lg:p-12 pb-8">
 <div class="flex items-center justify-between mb-8">
@@ -114,10 +114,10 @@
                 MMXXVI © The House of Owls
             </footer>
 </aside>
-<main class="flex-1 h-screen overflow-y-auto bg-white lg:w-[calc(100%-400px)]">
+<main class="flex-1 w-full lg:w-[calc(100%-400px)]">
 <div class="max-w-4xl mx-auto p-6 lg:p-24 space-y-16">
 <section class="space-y-8">
-<div class="aspect-[4/5] md:aspect-[3/2] overflow-hidden bg-neutral-100">
+<div class="aspect-video lg:aspect-[3/2] overflow-hidden bg-neutral-100">
 <img alt="China Merchant Bank" class="gallery-image w-full h-full object-cover" src="https://lh3.googleusercontent.com/d/1Uze_4i3anZaBwuHp8huF6yt_t14NKO5H" style="">
 </div>
 <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
