@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;700&amp;family=Playfair+Display:ital,wght@0,400;0,700;1,400&amp;family=Outfit:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ffffff",
+                        "page-bg": "#0A0A0A",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"],
+                        "serif": ["Playfair Display", "serif"],
+                        "logo": ["Outfit", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0rem", "lg": "0rem", "xl": "0rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        body {
+            background-color: #0A0A0A;
+        }
+        .mini-logo-frame {
+            border: 2px solid #ffffff;
+            border-radius: 4px;
+            width: 32px;
+            height: 20px;
+        }
+        .full-bleed-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body class="font-display text-white antialiased">
+<div class="relative min-h-screen flex flex-col bg-page-bg">
+<header class="absolute top-0 left-0 w-full z-20 flex items-center justify-between px-4 lg:px-12 py-6 lg:py-10 mix-blend-difference">
+<div class="flex items-center gap-4">
+<div class="mini-logo-frame border-white"></div>
+<h2 class="font-logo text-white text-[10px] font-bold tracking-[0.4em] uppercase">
+                    The House of Owls
+                </h2>
+</div>
+<nav class="flex items-center gap-12">
+<a class="text-white/60 hover:text-white text-[9px] font-medium uppercase tracking-[0.3em] transition-colors" href="#">Inquiry</a>
+<a class="text-white/60 hover:text-white text-[9px] font-medium uppercase tracking-[0.3em] transition-colors" href="#">Journal</a>
+</nav>
+</header>
+<main class="flex-1 flex flex-col lg:flex-row min-h-screen">
+<div class="relative w-full lg:w-[65%] h-[50vh] lg:h-screen overflow-hidden">
+<img alt="Dramatic Staircase Minimalist Interior" class="full-bleed-image grayscale contrast-125 brightness-75" src="https://lh3.googleusercontent.com/d/1ogiJWGVZrWm8LlCdBWDJt5goLDNwsao8"/>
+<div class="absolute left-12 bottom-24 hidden lg:flex flex-col items-center gap-8 mix-blend-overlay">
+<div class="h-16 w-[0.5px] bg-white/40"></div>
+<span class="rotate-90 text-[8px] uppercase tracking-[0.6em] text-white/60 whitespace-nowrap origin-center">The Portfolio</span>
+</div>
+</div>
+<div class="w-full lg:w-[35%] flex flex-col justify-center px-6 lg:px-20 py-12 lg:py-0 bg-page-bg">
+<div class="max-w-md space-y-12">
+<div class="space-y-6">
+<span class="text-[10px] font-medium uppercase tracking-[0.8em] text-white/30 block mb-2">Portfolio Entry 02</span>
+<h1 class="font-serif italic text-6xl lg:text-7xl text-white leading-tight">The Ascent</h1>
+<div class="h-px w-16 bg-white/20"></div>
+</div>
+<div class="space-y-8">
+<p class="font-serif text-base leading-relaxed text-white/70 italic">
+                            A study in verticality and rhythm. This project explores the transition between levels as a meditative experience rather than a mere utility.
+                        </p>
+<p class="font-serif text-sm leading-relaxed text-white/50">
+                            The sharp contrast of light hitting the monolithic steps creates a play of shadows that evolves with the sun's trajectory throughout the day.
+                        </p>
+<p class="font-serif text-xs tracking-widest text-white/30 uppercase">
+                            Malaysia, 2024
+                        </p>
+</div>
+</div>
+</div>
+</main>
+<footer class="absolute bottom-0 left-0 w-full z-20 px-4 lg:px-12 py-8 lg:py-12 flex justify-between items-end mix-blend-difference">
+<div class="flex flex-col gap-2">
+<span class="text-[10px] font-medium uppercase tracking-[0.5em] text-white/40">Chapter II</span>
+<span class="font-serif italic text-sm text-white/40">03/10</span>
+</div>
+<a href="portfolio.html" class="group flex items-center gap-6 transition-all">
+<span class="text-white/60 group-hover:text-white font-serif italic text-xl transition-colors">Turn the Page</span>
+<div class="text-white/40 group-hover:text-white transition-all">
+<span class="material-symbols-outlined !text-3xl font-extralight">east</span>
+</div>
+</a>
+</footer>
+</div>
+
+</body></html>

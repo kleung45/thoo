@@ -1,0 +1,105 @@
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#141414",
+                        "background-light": "#fdfcf8",
+                        "background-dark": "#191919",
+                    },
+                    fontFamily: {
+                        "display": ["Newsreader", "serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                },
+            },
+        }
+        .logo-frame {
+            border: 8px solid #000000;
+            border-radius: 20px;
+            width: 80px;
+            height: 50px;
+        }
+    </script>
+<title>The House of Owls | Contact</title>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-primary transition-colors duration-300">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<header class="flex flex-col items-center justify-center pt-16 pb-24 px-10">
+<div class="flex flex-col items-center gap-6">
+<div class="logo-frame"></div>
+<h1 class="font-logo text-black text-xl md:text-2xl font-light tracking-[0.6em] uppercase text-center">
+                    The House of Owls
+                </h1>
+</div>
+</header>
+<main class="flex-1 flex flex-col items-center justify-center px-4 md:px-20 max-w-[1200px] mx-auto w-full">
+<h1 class="text-primary dark:text-slate-100 text-[42px] md:text-[56px] italic font-light mb-16 text-center">Chapter X: The Conversation</h1>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-12 w-full items-center">
+<!-- Sketch Column -->
+<div class="md:col-span-4 flex justify-center md:justify-end">
+<div class="relative w-64 h-64 grayscale opacity-80 hover:opacity-100 transition-opacity">
+<div class="absolute inset-0 border border-primary/10 rounded-lg"></div>
+<img alt="Charcoal sketch of a desk" class="w-full h-full object-contain p-4" data-alt="Delicate charcoal sketch of an antique desk and quill" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQJXPQryPH3iiwJkF8nGjKQQgY36y6_KuYMEXqHq4FWoraYnZhqhbg86Rrh8Fp8VTf8DHcDT3wGF6dAq1NkC_KdfYem1PLYXYa64RxSucIQOdmoQZPjDVgee-P_D-i8kY2Q13U74LZwW84NE6qr0j0IMAAdYB6QLgTL4uyhlgRPYdNppnTWngEbU6aNW_rYaWEgTAr_KToohVu3eb7foQMPsIs4xuNKuwBEuZcaKo_k-lxSZ0vga8TdE8-Qa2lgQ-VNzgf_28qCak"/>
+</div>
+</div>
+<!-- Story Form Column -->
+<div class="md:col-span-8 flex flex-col gap-12">
+<div class="group relative">
+<label class="text-primary/60 dark:text-slate-400 text-lg italic block mb-2">My name is...</label>
+<input class="w-full bg-transparent border-0 border-b border-primary/20 focus:border-primary focus:ring-0 text-2xl py-2 px-0 transition-colors dark:text-slate-100 dark:border-slate-700 dark:focus:border-slate-400" placeholder="Full name" type="text"/>
+</div>
+<div class="group relative">
+<label class="text-primary/60 dark:text-slate-400 text-lg italic block mb-2">I am writing to...</label>
+<input class="w-full bg-transparent border-0 border-b border-primary/20 focus:border-primary focus:ring-0 text-2xl py-2 px-0 transition-colors dark:text-slate-100 dark:border-slate-700 dark:focus:border-slate-400" placeholder="Your message or purpose" type="text"/>
+</div>
+<div class="group relative">
+<label class="text-primary/60 dark:text-slate-400 text-lg italic block mb-2">Reach me at...</label>
+<input class="w-full bg-transparent border-0 border-b border-primary/20 focus:border-primary focus:ring-0 text-2xl py-2 px-0 transition-colors dark:text-slate-100 dark:border-slate-700 dark:focus:border-slate-400" placeholder="Email address" type="email"/>
+</div>
+</div>
+</div>
+<!-- Submit Button Section -->
+<div class="w-full flex justify-end mt-20 mb-20">
+<button class="group flex items-center gap-4 border border-primary dark:border-slate-100 px-8 py-4 hover:bg-primary hover:text-white dark:hover:bg-slate-100 dark:hover:text-primary transition-all duration-300">
+<span class="text-lg tracking-widest uppercase font-medium">Send the Letter</span>
+<span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+</div>
+</main>
+<!-- Footer Navigation -->
+<footer class="px-4 lg:px-10 py-8 lg:py-12 border-t border-primary/5 dark:border-slate-800">
+<div class="max-w-[1200px] mx-auto flex justify-between items-center">
+<nav class="flex gap-8">
+<a class="text-sm uppercase tracking-widest text-primary/60 hover:text-primary dark:text-slate-400 dark:hover:text-slate-100 transition-colors" href="index.html">Home</a>
+<a class="text-sm uppercase tracking-widest text-primary/60 hover:text-primary dark:text-slate-400 dark:hover:text-slate-100 transition-colors" href="portfolio.html">Portfolio</a>
+</nav>
+<div class="hidden md:flex items-center gap-2 text-primary/40 dark:text-slate-600 text-xs tracking-tighter">
+<span>EST. MMXXVI The House of Owls</span>
+<span class="size-1 bg-primary/20 dark:bg-slate-700 rounded-full"></span>
+<span>ALL RIGHTS RESERVED</span>
+</div>
+<div class="flex gap-4">
+<button class="p-2 hover:bg-primary/5 dark:hover:bg-slate-800 rounded-full transition-colors text-primary dark:text-slate-400">
+<span class="material-symbols-outlined text-lg">share</span>
+</button>
+</div>
+</div>
+</footer>
+</div>
+</div>
+
+```</body></html>

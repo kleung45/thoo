@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;700&amp;family=Playfair+Display:ital,wght@0,400;0,700;1,400&amp;family=Outfit:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#000000",
+              "page-bg": "#F9F9F7",
+            },
+            fontFamily: {
+              "display": ["Manrope", "sans-serif"],
+              "serif": ["Playfair Display", "serif"],
+              "logo": ["Outfit", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0rem", "lg": "0rem", "xl": "0rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style type="text/tailwindcss">
+        body {
+            background-color: #F9F9F7;
+        }
+        .logo-frame {
+            border: 18px solid #000000;
+            border-radius: 40px;
+            width: 220px;
+            height: 140px;
+        }
+    </style>
+</head>
+<body class="font-display text-black antialiased">
+<div class="relative min-h-screen flex flex-col">
+<button id="menu-toggle" class="lg:hidden fixed top-4 right-4 z-50 p-2">
+    <span class="material-symbols-outlined">menu</span>
+</button>
+<header class="flex items-center justify-between px-4 lg:px-16 py-6 lg:py-10">
+<div class="flex items-center opacity-0 pointer-events-none lg:opacity-100 lg:pointer-events-auto">
+<h2 class="font-serif text-xl tracking-tight text-black">The House of Owls</h2>
+</div>
+<nav id="mobile-nav" class="fixed inset-0 bg-[#F9F9F7] z-40 flex flex-col items-center justify-center gap-8 transform translate-x-full lg:translate-x-0 lg:static lg:flex-row lg:gap-12 lg:bg-transparent transition-transform duration-300">
+<button id="close-nav" class="lg:hidden absolute top-4 right-4 p-2">
+    <span class="material-symbols-outlined">close</span>
+</button>
+<a class="text-black/60 hover:text-black text-[10px] font-medium uppercase tracking-[0.3em] transition-colors" href="contact.html">Inquiry</a>
+</nav>
+</header>
+<main class="flex-1 flex flex-col items-center justify-center px-4 relative max-w-4xl mx-auto w-full -mt-20">
+<div class="flex flex-col items-center text-center space-y-12">
+<div class="flex flex-col items-center gap-8">
+<div class="logo-frame"></div>
+<h1 class="font-logo text-black text-3xl md:text-4xl font-light tracking-[0.4em] uppercase">
+                        The House of Owls
+                    </h1>
+</div>
+<div class="max-w-md mx-auto pt-8">
+<p class="font-serif text-black/70 text-lg md:text-xl leading-relaxed italic">
+                        Enter the quiet world where spaces speak.
+                    </p>
+</div>
+</div>
+</main>
+<footer class="px-4 lg:px-16 py-8 lg:py-12 flex justify-end items-center">
+<a href="About.html" class="group flex items-center gap-4 transition-all duration-700">
+<span class="text-black/30 group-hover:text-black font-serif italic text-lg transition-colors">Turn the Page</span>
+<div class="text-black/20 group-hover:text-black transition-all duration-500">
+<span class="material-symbols-outlined !text-xl font-extralight">east</span>
+</div>
+</a>
+</footer>
+<div class="fixed left-12 top-1/2 -translate-y-1/2 hidden lg:flex flex-col items-center gap-12">
+<span class="rotate-90 text-[9px] uppercase tracking-[0.4em] text-black/20 whitespace-nowrap">Est. MMXXVI</span>
+<div class="h-16 w-[0.5px] bg-black/10"></div>
+</div>
+
+<script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileNav = document.getElementById('mobile-nav');
+    const closeNav = document.getElementById('close-nav');
+    menuToggle.addEventListener('click', () => {
+        mobileNav.classList.remove('translate-x-full');
+    });
+    closeNav.addEventListener('click', () => {
+        mobileNav.classList.add('translate-x-full');
+    });
+</script>
+
+</body></html>

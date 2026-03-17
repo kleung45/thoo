@@ -1,0 +1,208 @@
+<!DOCTYPE html><html class="light" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;700&amp;family=Playfair+Display:ital,wght@0,400;0,700;1,400&amp;family=Outfit:wght@300;400;500;600&amp;family=La+Belle+Aurore&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#000000",
+                        "page-bg": "#F9F9F7",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"],
+                        "serif": ["Playfair Display", "serif"],
+                        "logo": ["Outfit", "sans-serif"],
+                        "handwritten": ["La Belle Aurore", "cursive"]
+                    },
+                    borderRadius: { "DEFAULT": "0rem", "lg": "0rem", "xl": "0rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        body {
+            background-color: #F9F9F7;
+        }
+        .logo-frame {
+            border: 8px solid #000000;
+            border-radius: 20px;
+            width: 80px;
+            height: 50px;
+        }
+        .gallery-image {
+            filter: grayscale(100%) contrast(1.05);
+        }
+        .project-link:hover .dot {
+            transform: scale(1.5);
+            background-color: #000;
+        }
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
+        .scrollbar-hide {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="font-display text-black antialiased">
+<div class="flex flex-col lg:flex-row h-screen w-full">
+<button id="menu-toggle" class="lg:hidden fixed top-4 left-4 z-50 p-2 bg-white border border-black/10">
+    <span class="material-symbols-outlined">menu</span>
+</button>
+<aside class="w-full lg:w-[400px] border-r border-black/5 flex flex-col h-full bg-[#F9F9F7] z-10 fixed lg:relative inset-0 transform -translate-x-full lg:translate-x-0 transition-transform duration-300" id="sidebar">
+<button id="close-menu" class="lg:hidden absolute top-4 right-4 p-2"><span class="material-symbols-outlined">close</span></button>
+<header class="p-6 lg:p-12 pb-8">
+<div class="flex items-center justify-between mb-8">
+<a href="portfolio.html" class="flex items-center gap-2 text-black/40 hover:text-black transition-colors">
+<span class="material-symbols-outlined !text-lg"><</span>
+<span class="text-[9px] uppercase tracking-widest">Back</span>
+</a>
+</div>
+<div class="flex flex-col gap-4 mb-12">
+<div class="logo-frame"></div>
+<h1 class="font-logo text-black text-xs font-light tracking-[0.4em] uppercase" style="">
+                        The House of Owls
+                    </h1>
+</div>
+<div class="space-y-6">
+<div class="flex items-center gap-4 text-[10px] uppercase tracking-widest text-black/40">
+<span class="" style="">Catalogue Raisonné</span>
+<div class="h-[1px] flex-1 bg-black/10"></div>
+</div>
+<nav class="flex gap-6 text-[11px] uppercase tracking-widest">
+<button class="text-black border-b border-black pb-1" style="">All</button>
+<button class="text-black/40 hover:text-black transition-colors" style="">Residential</button>
+<button class="text-black/40 hover:text-black transition-colors" style="">Cultural</button>
+</nav>
+</div>
+</header>
+<div class="flex-1 overflow-y-auto px-6 lg:px-12 pb-12 scrollbar-hide">
+<div class="flex flex-col gap-8">
+<a class="project-link group flex items-baseline gap-4 py-2 border-b border-black/5 opacity-40 hover:opacity-100 transition-opacity" href="#" style="">
+<span class="text-[9px] font-mono text-black/30" style="">001</span>
+<span class="text-xl font-serif italic text-black group-hover:translate-x-2 transition-transform duration-500" style="">Retail</span>
+</a>
+<a class="project-link group flex items-baseline gap-4 py-2 border-b border-black/5" href="#" style="">
+<span class="text-[9px] font-mono text-black/30" style="">002</span>
+<span class="text-xl font-serif italic text-black group-hover:translate-x-2 transition-transform duration-500" style="">Office</span>
+</a>
+<a class="project-link group flex items-baseline gap-4 py-2 border-b border-black/5 opacity-40 hover:opacity-100 transition-opacity" href="#" style="">
+<span class="text-[9px] font-mono text-black/30" style="">003</span>
+<span class="text-xl font-serif italic text-black group-hover:translate-x-2 transition-transform duration-500" style="">Residential</span>
+</a>
+<a class="project-link group flex items-baseline gap-4 py-2 border-b border-black/5 opacity-40 hover:opacity-100 transition-opacity" href="#" style="">
+<span class="text-[9px] font-mono text-black/30" style="">004</span>
+<span class="text-xl font-serif italic text-black group-hover:translate-x-2 transition-transform duration-500" style="">Arts Installation</span>
+</a>
+<a class="project-link group flex items-baseline gap-4 py-2 border-b border-black/5 opacity-40 hover:opacity-100 transition-opacity" href="#" style="">
+<span class="text-[9px] font-mono text-black/30" style="">005</span>
+<span class="text-xl font-serif italic text-black group-hover:translate-x-2 transition-transform duration-500" style="">Architecture</span>
+</a>
+<a class="project-link group flex items-baseline gap-4 py-2 border-b border-black/5 opacity-40 hover:opacity-100 transition-opacity" href="#" style="">
+<span class="text-[9px] font-mono text-black/30" style="">006</span>
+<span class="text-xl font-serif italic text-black group-hover:translate-x-2 transition-transform duration-500" style="">Exhibition</span>
+</a>
+</div>
+</div>
+<footer class="p-6 lg:p-12 pt-6 text-[9px] uppercase tracking-[0.3em] text-black/30">
+                MMXXVI© The house of owls
+            </footer>
+</aside>
+<main class="flex-1 h-screen overflow-y-auto bg-white lg:w-[calc(100%-400px)]">
+<div class="max-w-4xl mx-auto p-6 lg:p-24 space-y-16">
+<section class="space-y-8">
+<div class="relative aspect-[4/5] md:aspect-[3/2] overflow-hidden bg-neutral-100">
+<img id="project-image" alt="The Library" class="gallery-image w-full h-full object-cover" src="https://lh3.googleusercontent.com/d/1kohaPQid6561ccs_BF3bwgw9Zy5NNusb" style="">
+<button onclick="prevImage()" class="absolute bottom-4 left-4 bg-white/90 hover:bg-white text-black text-[10px] uppercase tracking-widest px-4 py-2 border border-black/10 transition-colors">Prev</button>
+<button onclick="nextImage()" class="absolute bottom-4 right-4 bg-white/90 hover:bg-white text-black text-[10px] uppercase tracking-widest px-4 py-2 border border-black/10 transition-colors">Next</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+<div class="col-span-1 space-y-6">
+<div>
+<h3 class="text-[10px] uppercase tracking-widest text-black/40 mb-2" style="">Location</h3>
+<p class="text-sm" style="">Hong Kong, China</p>
+</div>
+<div>
+<h3 class="text-[10px] uppercase tracking-widest text-black/40 mb-2" style="">Scope</h3>
+<p class="text-sm" style="">Nova</p>
+</div>
+<div>
+<h3 class="text-[10px] uppercase tracking-widest text-black/40 mb-2" style="">Year</h3>
+<p class="text-sm" style="">July 2012</p>
+</div>
+</div>
+<div class="col-span-2 space-y-8">
+<h2 class="text-4xl font-serif italic leading-tight" style="">The Nova Nexus: Designing a Multi-Sensory Headquarters in Hong Kong</h2>
+<div class="space-y-6 font-serif text-lg leading-relaxed text-black/80">
+<p class="" style="">
+                                    The objective of this project was to design a new headquarters for Nova in the heart of Hong Kong. The brief called for a space that transcends the typical office environment. Nova required a headquarters that is not only highly functional for daily operations but also serves as a physical manifestation of their brand identity. The core challenge was to balance the utilitarian needs of a modern office with the aesthetic ambition of creating a powerful brand experience.
+
+<p class="font-handwritten text-2xl pt-4 text-black/60" style="">
+                                    "To create a strong brand identity, we moved away from a single, monolithic design language. Instead, we curated a palette of contrasting materials that communicate different facets of the Nova brand"
+                                </p>
+</div>
+</div>
+</div>
+</section>
+<div class="flex justify-between items-center pt-16 border-t border-black/5">
+<a href="yantian.html" class="flex items-center gap-3 text-black/40 hover:text-black transition-colors group" style="">
+<span class="material-symbols-outlined !text-lg transition-transform group-hover:-translate-x-1" style="">west</span>
+<span class="text-[10px] uppercase tracking-widest font-bold" style="">Previous</span>
+</a>
+<div class="text-[10px] font-mono tracking-widest" style="">001 / 012</div>
+<a href="legend.html" class="flex items-center gap-3 text-black/40 hover:text-black transition-colors group" style="">
+<span class="text-[10px] uppercase tracking-widest font-bold" style="">Next Project</span>
+<span class="material-symbols-outlined !text-lg transition-transform group-hover:translate-x-1" style="">east</span>
+</a>
+</div>
+</div>
+</main>
+</div>
+<div class="fixed right-4 lg:right-8 top-1/2 -translate-y-1/2 hidden lg:flex flex-col items-center gap-12 pointer-events-none">
+<span class="rotate-90 text-[9px] uppercase tracking-[0.4em] text-black/10 whitespace-nowrap" style="">Volume I: Materiality</span>
+<div class="h-16 w-[0.5px] bg-black/5"></div>
+</div>
+
+<script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const sidebar = document.getElementById('sidebar');
+        const closeMenu = document.getElementById('close-menu');
+        if (menuToggle) {
+            menuToggle.addEventListener('click', () => {
+                sidebar.classList.remove('-translate-x-full');
+            });
+        }
+        if (closeMenu) {
+            closeMenu.addEventListener('click', () => {
+                sidebar.classList.add('-translate-x-full');
+            });
+        }
+    </script>
+
+    <script>
+        const images = [
+            "https://lh3.googleusercontent.com/d/1kohaPQid6561ccs_BF3bwgw9Zy5NNusb",
+            "https://lh3.googleusercontent.com/d/1it0v-sqcy2So2HscgREdbIDEnWKMgzBW"
+        ];
+        let currentIndex = 0;
+        
+        function nextImage() {
+            const img = document.getElementById("project-image");
+            currentIndex = (currentIndex + 1) % images.length;
+            img.src = images[currentIndex];
+        }
+
+        function prevImage() {
+            const img = document.getElementById("project-image");
+            currentIndex = (currentIndex - 1 + images.length) % images.length;
+            img.src = images[currentIndex];
+        }
+    </script>
+
+</body></html>
