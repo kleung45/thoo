@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://houseofowls.design/sitemap.xml
+Sitemap: https://ooowls.com/sitemap.xml
