@@ -55,6 +55,25 @@
             pointer-events: none;
             transition: opacity 0.8s ease-out;
         }
+        #page-transition {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 9998;
+            background: #F9F9F7;
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.4s ease-in-out;
+        }
+        #page-transition.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+        a {
+            transition: opacity 0.3s ease;
+        }
     </style>
     <title>The House of Owls | Luxury Interior Design Studio</title>
     <meta name="description" content="The House of Owls is a luxury interior design studio creating immersive residential and commercial spaces. Enter the quiet world where spaces speak.">
@@ -77,6 +96,7 @@
         <source src="load.mp4" type="video/mp4">
     </video>
 </div>
+<div id="page-transition"></div>
 <div class="relative min-h-screen flex flex-col">
 <button id="menu-toggle" class="lg:hidden fixed top-4 right-4 z-50 p-2">
     <span class="material-symbols-outlined">menu</span>
@@ -131,6 +151,20 @@
     });
     closeNav.addEventListener('click', () => {
         mobileNav.classList.add('translate-x-full');
+    });
+
+    const pageTransition = document.getElementById('page-transition');
+    document.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', (e) => {
+            const href = link.getAttribute('href');
+            if (href && !href.startsWith('#') && !href.startsWith('http')) {
+                e.preventDefault();
+                pageTransition.classList.add('active');
+                setTimeout(() => {
+                    window.location.href = href;
+                }, 400);
+            }
+        });
     });
 </script>
 

@@ -30,7 +30,7 @@
             },
         }
     </script>
-<style type="text/tailwindcss">
+    <style type="text/tailwindcss">
         body {
             background-color: #F9F9F7;
         }
@@ -61,6 +61,22 @@
                 grid-template-columns: 1fr;
             }
         }
+        #page-transition {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 9998;
+            background: #F9F9F7;
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.4s ease-in-out;
+        }
+        #page-transition.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
     </style>
     <title>Portfolio | The House of Owls | Curated Archive of Interior Design Projects</title>
     <meta name="description" content="Explore The House of Owls curated archive of interior design projects including residential, retail, office, and cultural spaces across Asia.">
@@ -77,6 +93,7 @@
     <link rel="icon" type="image/png" href="/favicon.png">
 </head>
 <body class="font-display text-black antialiased">
+<div id="page-transition"></div>
 <div class="relative min-h-screen flex flex-col">
 <div class="fixed left-12 top-1/2 -translate-y-1/2 hidden lg:flex flex-col items-center gap-12 z-10">
 <span class="rotate-90 text-[9px] uppercase tracking-[0.4em] text-black/30 whitespace-nowrap">Curated Archive MMXXVI</span>
@@ -217,5 +234,21 @@
 </a>
 </footer>
 </div>
+
+<script>
+    const pageTransition = document.getElementById('page-transition');
+    document.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', (e) => {
+            const href = link.getAttribute('href');
+            if (href && !href.startsWith('#') && !href.startsWith('http')) {
+                e.preventDefault();
+                pageTransition.classList.add('active');
+                setTimeout(() => {
+                    window.location.href = href;
+                }, 400);
+            }
+        });
+    });
+</script>
 
 </body></html>

@@ -5,32 +5,49 @@
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        "primary": "#141414",
-                        "background-light": "#fdfcf8",
-                        "background-dark": "#191919",
-                    },
-                    fontFamily: {
-                        "display": ["Newsreader", "serif"]
-                    },
-                    borderRadius: {
-                        "DEFAULT": "0.125rem",
-                        "lg": "0.25rem",
-                        "xl": "0.5rem",
-                        "full": "0.75rem"
-                    },
+    tailwind.config = {
+        darkMode: "class",
+        theme: {
+            extend: {
+                colors: {
+                    "primary": "#141414",
+                    "background-light": "#fdfcf8",
+                    "background-dark": "#191919",
+                },
+                fontFamily: {
+                    "display": ["Newsreader", "serif"]
+                },
+                borderRadius: {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
                 },
             },
         }
-        .logo-frame {
-            width: 80px;
-            height: 50px;
-        }
     </script>
+<style type="text/tailwindcss">
+    .logo-frame {
+        width: 80px;
+        height: 50px;
+    }
+    #page-transition {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 9998;
+        background: #fdfcf8;
+        pointer-events: none;
+        opacity: 0;
+        transition: opacity 0.4s ease-in-out;
+    }
+    #page-transition.active {
+        opacity: 1;
+        pointer-events: auto;
+    }
+</style>
 <title>Contact Us | The House of Owls | Interior Design Studio</title>
 <meta name="description" content="Get in touch with The House of Owls interior design studio. We welcome inquiries for residential, commercial, and cultural design projects.">
 <meta name="keywords" content="contact interior designer, interior design inquiry, luxury interior design, House of Owls">
@@ -47,6 +64,7 @@
 <link rel="icon" type="image/png" href="/favicon.png">
 </head>
 <body class="bg-background-light dark:bg-background-dark font-display text-primary transition-colors duration-300">
+<div id="page-transition"></div>
 <div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
 <div class="layout-container flex h-full grow flex-col">
 <header class="flex flex-col items-center justify-center pt-16 pb-24 px-10">
@@ -110,4 +128,20 @@
 </div>
 </div>
 
-```</body></html>
+<script>
+    const pageTransition = document.getElementById('page-transition');
+    document.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', (e) => {
+            const href = link.getAttribute('href');
+            if (href && !href.startsWith('#') && !href.startsWith('http')) {
+                e.preventDefault();
+                pageTransition.classList.add('active');
+                setTimeout(() => {
+                    window.location.href = href;
+                }, 400);
+            }
+        });
+    });
+</script>
+
+</body></html>

@@ -50,9 +50,26 @@
             height: 100%;
             object-fit: cover;
         }
+        #page-transition {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 9998;
+            background: #0A0A0A;
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.4s ease-in-out;
+        }
+        #page-transition.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
     </style>
 </head>
 <body class="font-display text-white antialiased">
+<div id="page-transition"></div>
 <div class="relative min-h-screen flex flex-col bg-page-bg">
 <header class="absolute top-0 left-0 w-full z-20 flex items-center justify-end px-4 lg:px-12 py-6 lg:py-10 mix-blend-difference">
 <nav class="flex items-center gap-12">
@@ -101,5 +118,21 @@
 </a>
 </footer>
 </div>
+
+<script>
+    const pageTransition = document.getElementById('page-transition');
+    document.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', (e) => {
+            const href = link.getAttribute('href');
+            if (href && !href.startsWith('#') && !href.startsWith('http')) {
+                e.preventDefault();
+                pageTransition.classList.add('active');
+                setTimeout(() => {
+                    window.location.href = href;
+                }, 400);
+            }
+        });
+    });
+</script>
 
 </body></html>
